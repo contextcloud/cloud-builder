@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', ' --build-arg', 'VERSION=v0.2.0', '-t', 'gcr.io/$PROJECT_ID/contextcloud/ccb:latest', '.']
+  env:
+  - 'REVISION_ID=$REVISION_ID'
+  - 'GIT_COMMIT=$SHORT_SHA'
+images: 
+- gcr.io/$PROJECT_ID/contextcloud/ccb:latest
