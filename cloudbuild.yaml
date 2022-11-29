@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--build-arg', 'VERSION=v0.2.2', '-t', 'gcr.io/$PROJECT_ID/contextcloud/ccb:latest', '.']
+  args: ['build', '--build-arg', 'VERSION=v0.2.3', '-t', 'gcr.io/$PROJECT_ID/contextcloud/ccb:latest', '.']
   env:
   - 'REVISION_ID=$REVISION_ID'
   - 'GIT_COMMIT=$SHORT_SHA'
